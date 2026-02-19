@@ -45,7 +45,7 @@ Download **ClaudeCodeMenu.dmg** from the [latest release](https://github.com/ant
 rm -rf ~/Library/Application\ Scripts/com.anthropic.ClaudeCodeMenu.FinderExtension
 ```
 
-## Linux
+## Linux (Not Tested)
 
 ```bash
 bash linux/install.sh
