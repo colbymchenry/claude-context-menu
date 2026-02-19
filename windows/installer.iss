@@ -361,10 +361,12 @@ end;
 procedure RestartExplorer;
 var
   ResultCode: Integer;
+  ExplorerPath: string;
 begin
+  ExplorerPath := ExpandConstant('{win}\explorer.exe');
   Exec('taskkill.exe', '/f /im explorer.exe', '', SW_HIDE, ewWaitUntilTerminated, ResultCode);
   Sleep(2000);
-  Exec('explorer.exe', '', '', SW_SHOWNORMAL, ewNoWait, ResultCode);
+  Exec(ExplorerPath, '', '', SW_SHOWNORMAL, ewNoWait, ResultCode);
 end;
 
 // ---------------------------------------------------------------------------
