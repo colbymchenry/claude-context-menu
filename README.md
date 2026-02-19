@@ -25,6 +25,8 @@ On Windows 11 with .NET 8 SDK + [Developer Mode](ms-settings:developers), entrie
 
 ## macOS
 
+<img width="374" height="609" alt="Screenshot 2026-02-19 at 4 49 48 PM" src="https://github.com/user-attachments/assets/1f48ba6e-150a-4250-919e-72691ed7b499" />
+
 ```bash
 bash macos/install.sh
 ```
