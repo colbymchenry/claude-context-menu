@@ -1,2 +1,18 @@
 windows/modern/bin/
 windows/modern/obj/
+
+# Secrets / credentials (public repo — never commit these)
+.apple-credentials
+.env
+.env.*
+*.p12
+*.pem
+*.key
+*.cer
+*.mobileprovision
+*.provisionprofile
+
+# macOS
+.DS_Store
+
+.cmem/

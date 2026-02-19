@@ -178,6 +178,10 @@ osascript -e "tell application \\"Terminal\\"" \\
     <dict/>
     <key>workflowMetaData</key>
     <dict>
+        <key>serviceInputTypeIdentifier</key>
+        <string>com.apple.Automator.fileSystemObject</string>
+        <key>serviceApplicationGroupName</key>
+        <string>Finder</string>
         <key>workflowTypeIdentifier</key>
         <string>com.apple.Automator.servicesMenu</string>
     </dict>

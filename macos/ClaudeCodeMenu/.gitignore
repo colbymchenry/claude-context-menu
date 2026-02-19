@@ -1,0 +1,37 @@
+# Xcode
+*.xcodeproj
+*.xcworkspace
+xcuserdata/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xccheckout
+*.moved-aside
+
+# Build products
+*.app
+*.appex
+*.dmg
+*.pkg
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.xcarchive
+
+# Compiled AppleScripts
+scripts/*.scpt
+
+# Intermediate icon files
+ClaudeCodeMenu/Assets.xcassets/AppIcon.appiconset/icon_*.png
+FinderExtension/Assets.xcassets/ClaudeIcon.imageset/claude-icon*.png
+*.iconset
+*.icns
+
+# Credentials (never commit)
+.apple-credentials
+
+# Compiled resources
+ClaudeCodeMenu/Resources/*.scpt
