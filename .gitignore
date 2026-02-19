@@ -1,5 +1,6 @@
 windows/modern/bin/
 windows/modern/obj/
+windows/Output/
 
 # Secrets / credentials (public repo — never commit these)
 .apple-credentials

@@ -11,17 +11,23 @@ Right-click context menu entries for **"Open with Claude Code"** and **"Resume C
 
 <img width="510" height="397" alt="CONTEXT_MENU" src="https://github.com/user-attachments/assets/abd7f80a-2bc7-4009-83df-c34e101fd85f" />
 
-Double-click **`windows/install.cmd`**.
+Download **ClaudeCodeContextMenu-Setup.exe** from the [latest release](https://github.com/anthropics/claude-context-menu/releases/latest) and run it.
 
-The installer auto-detects your setup and walks you through everything:
-- Auto-detects Windows Terminal vs CMD
-- On Windows 11, offers to download and install the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) if needed, then builds a shell extension for the top-level right-click menu
-- Adds entries to the classic context menu on any Windows version
-- Restarts Explorer automatically so entries appear immediately
+1. Run the installer — no admin required
+2. A **System Detection** page shows what was found (Windows Terminal, Developer Mode, .NET 8, etc.)
+3. Click through the wizard — classic context menu entries are installed automatically
+4. On Windows 11 with [.NET 8 Runtime](https://dotnet.microsoft.com/download/dotnet/8.0) + [Developer Mode](ms-settings:developers), entries also appear in the top-level right-click menu
+5. Right-click any folder to see **"Open with Claude Code"** and **"Resume Chat with Claude"**
 
-On Windows 11 with .NET 8 SDK + [Developer Mode](ms-settings:developers), entries appear in **both** the top-level right-click menu and the classic "Show more options" menu. Without those, entries still appear in the classic menu.
+**Uninstall:** Settings → Apps → Installed apps → **Claude Code Context Menu** → Uninstall.
 
-**Uninstall:** Double-click `windows/uninstall.cmd`.
+<details>
+<summary>Alternative: install from source</summary>
+
+Double-click **`windows/install.cmd`**. This runs the PowerShell installer directly from the repo — it can also download the .NET 8 SDK and build the shell extension on-the-fly.
+
+Uninstall: Double-click `windows/uninstall.cmd`.
+</details>
 
 ## macOS
 
@@ -79,9 +85,11 @@ bash linux/uninstall.sh
 ```
 claude-context-menu/
 ├── icons/
-│   └── claude-icon.png        Icon for all platforms
+│   ├── claude-icon.png        Icon for all platforms
+│   └── claude-icon.ico        Windows icon (used by installer)
 ├── windows/
-│   ├── install.cmd            Double-click to install
+│   ├── installer.iss          Inno Setup script → .exe installer
+│   ├── install.cmd            Double-click to install (from source)
 │   ├── uninstall.cmd          Double-click to uninstall
 │   └── modern/                Shell extension source (C#/.NET 8)
 ├── macos/

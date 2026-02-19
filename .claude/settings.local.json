@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /c/Users/me/Projects/claude-context-menu log --oneline -10)",
+      "Bash(where:*)",
+      "Bash(python:*)",
+      "Bash(magick:*)",
+      "Bash(convert:*)",
+      "Bash(pip install:*)",
+      "Bash(winget install:*)",
+      "Bash(\"$LOCALAPPDATA/Programs/Inno Setup 6/ISCC.exe\" \"C:/Users/me/Projects/claude-context-menu/windows/installer.iss\")"
+    ]
+  }
+}
