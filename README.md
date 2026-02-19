@@ -1,5 +1,5 @@
-# <img width="256" height="256" alt="claude-icon" src="https://github.com/user-attachments/assets/39d92075-ade9-47f8-9999-8ab7369e6257" />
-Claude Code Context Menu
+<img width="256" height="256" alt="claude-icon" src="https://github.com/user-attachments/assets/39d92075-ade9-47f8-9999-8ab7369e6257" /> # Claude Code Context Menu 
+
 
 Right-click context menu entries for **"Open with Claude Code"** and **"Resume Chat with Claude"** on Windows, macOS, and Linux.
 
