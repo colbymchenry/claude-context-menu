@@ -25,22 +25,31 @@ On Windows 11 with .NET 8 SDK + [Developer Mode](ms-settings:developers), entrie
 
 ## macOS
 
-<img width="374" height="609" alt="Screenshot 2026-02-19 at 4 49 48 PM" src="https://github.com/user-attachments/assets/1f48ba6e-150a-4250-919e-72691ed7b499" />
+<img width="374" height="609" alt="Screenshot 2026-02-19 at 4 49 48 PM" src="https://github.com/user-attachments/assets/1f48ba6e-150a-4250-919e-72691ed7b499" />
+
+Download **ClaudeCodeMenu.dmg** from the [latest release](https://github.com/anthropics/claude-context-menu/releases/latest), open it, and drag **Claude Code Menu** to Applications.
+
+1. Launch **Claude Code Menu** — helper scripts install automatically
+2. Click **"Enable Finder Extension in System Settings"**
+3. Toggle on **Claude Code Menu** under Added Extensions
+4. Right-click any file or folder in Finder — entries appear at the top level with the Claude icon
+
+**Uninstall:** Move Claude Code Menu to Trash. To also remove helper scripts:
+```bash
+rm -rf ~/Library/Application\ Scripts/com.anthropic.ClaudeCodeMenu.FinderExtension
+```
+
+<details>
+<summary>Alternative: Quick Actions (no app install)</summary>
 
 ```bash
 bash macos/install.sh
 ```
 
-This creates two Finder Quick Actions in `~/Library/Services/`. They appear in Finder's right-click → **Quick Actions** menu.
+Creates two Finder Quick Actions in `~/Library/Services/`. They appear under right-click → **Quick Actions** submenu (not top-level).
 
-**Uninstall:**
-```bash
-bash macos/uninstall.sh
-```
-
-> **Note:** macOS renders Quick Action icons as white monochrome templates — this is an Apple design limitation. The entries show by name only.
-
-If the entries don't appear immediately, open and close Automator once to refresh the cache, or log out and back in.
+Uninstall: `bash macos/uninstall.sh`
+</details>
 
 ## Linux
 
@@ -70,13 +79,14 @@ bash linux/uninstall.sh
 ```
 claude-context-menu/
 ├── icons/
-│   └── claude-icon.png        Icon for Linux file managers
+│   └── claude-icon.png        Icon for all platforms
 ├── windows/
 │   ├── install.cmd            Double-click to install
 │   ├── uninstall.cmd          Double-click to uninstall
 │   └── modern/                Shell extension source (C#/.NET 8)
 ├── macos/
-│   ├── install.sh             bash macos/install.sh
+│   ├── ClaudeCodeMenu/        Finder Sync Extension (Swift, builds DMG)
+│   ├── install.sh             Quick Actions fallback
 │   └── uninstall.sh
 └── linux/
     ├── install.sh             bash linux/install.sh
