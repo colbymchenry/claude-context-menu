@@ -45,18 +45,6 @@ Download **ClaudeCodeMenu.dmg** from the [latest release](https://github.com/ant
 rm -rf ~/Library/Application\ Scripts/com.anthropic.ClaudeCodeMenu.FinderExtension
 ```
 
-<details>
-<summary>Alternative: Quick Actions (no app install)</summary>
-
-```bash
-bash macos/install.sh
-```
-
-Creates two Finder Quick Actions in `~/Library/Services/`. They appear under right-click → **Quick Actions** submenu (not top-level).
-
-Uninstall: `bash macos/uninstall.sh`
-</details>
-
 ## Linux
 
 ```bash
