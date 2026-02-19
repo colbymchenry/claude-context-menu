@@ -9,22 +9,17 @@ Right-click context menu entries for **"Open with Claude Code"** and **"Resume C
 
 ## Windows
 
-Two variants — pick one:
+Double-click **`windows/install.cmd`**.
 
-| File | Terminal |
-|------|----------|
-| `windows/install.reg` | CMD (`cmd.exe`) |
-| `windows/install-wt.reg` | [Windows Terminal](https://aka.ms/terminal) (`wt.exe`) |
+The installer auto-detects your setup and walks you through everything:
+- Auto-detects Windows Terminal vs CMD
+- On Windows 11, offers to download and install the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) if needed, then builds a shell extension for the top-level right-click menu
+- Adds entries to the classic context menu on any Windows version
+- Restarts Explorer automatically so entries appear immediately
 
-**Install:** Double-click the `.reg` file and confirm the merge. No admin rights required.
+On Windows 11 with .NET 8 SDK + [Developer Mode](ms-settings:developers), entries appear in **both** the top-level right-click menu and the classic "Show more options" menu. Without those, entries still appear in the classic menu.
 
-**Uninstall:** Double-click `windows/uninstall.reg`.
-
-Both entries appear when you right-click a folder or right-click empty space inside a folder. On Windows 11 they're under "Show more options" (classic context menu).
-
-The entries show the Claude icon automatically (extracted from `claude.exe` via PATH).
-
-> **Note:** If `claude` isn't in your PATH, edit the `.reg` file and replace `claude` with the full path, e.g. `C:\\Users\\YourName\\AppData\\Local\\Programs\\claude\\claude.exe`.
+**Uninstall:** Double-click `windows/uninstall.cmd`.
 
 ## macOS
 
@@ -71,16 +66,16 @@ bash linux/uninstall.sh
 ```
 claude-context-menu/
 ├── icons/
-│   └── claude-icon.png          256×256 icon for Linux file managers
+│   └── claude-icon.png        Icon for Linux file managers
 ├── windows/
-│   ├── install.reg              CMD variant
-│   ├── install-wt.reg           Windows Terminal variant
-│   └── uninstall.reg
+│   ├── install.cmd            Double-click to install
+│   ├── uninstall.cmd          Double-click to uninstall
+│   └── modern/                Shell extension source (C#/.NET 8)
 ├── macos/
-│   ├── install.sh
+│   ├── install.sh             bash macos/install.sh
 │   └── uninstall.sh
 └── linux/
-    ├── install.sh
+    ├── install.sh             bash linux/install.sh
     └── uninstall.sh
 ```
 
