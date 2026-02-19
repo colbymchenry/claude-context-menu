@@ -9,6 +9,8 @@ Right-click context menu entries for **"Open with Claude Code"** and **"Resume C
 
 ## Windows
 
+<img width="510" height="397" alt="CONTEXT_MENU" src="https://github.com/user-attachments/assets/abd7f80a-2bc7-4009-83df-c34e101fd85f" />
+
 Double-click **`windows/install.cmd`**.
 
 The installer auto-detects your setup and walks you through everything:
